@@ -1,0 +1,532 @@
+/*
+Name: Shrey Patel
+Student Number: 158379214
+Email: spatel562@myseneca.ca
+Section: ZAA
+*/
+
+/* General CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+html, body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #f6ff00;
+    border: 2px solid #ff7700;
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 10px 180px 10px;
+}
+
+.btn:hover {
+    border: 2px solid #000000;
+    background: #ff7700;
+    transition: 1s;
+    color: #000;
+}
+
+.btn i {
+    color: #fff;
+    font-weight: 800;
+}
+
+.btn a {
+    color: #fff;
+    font-weight: 800;
+}
+
+.heading {
+    padding-top: 40px;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #ffffffd7;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    background-color: #0F0119;
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    z-index: 400;
+    right: 0;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 45px 15px 0;
+    position: relative;
+}
+
+.nav-link {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-item::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menu-icon div {
+    display: block;
+    background-color: #FFF;
+    height: 2px;
+    width: 24px;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after{
+    width: 100%;
+}
+
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+/* Home Page */
+
+.home {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(177, 64, 243, 0.3)),url(img/bg_img.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-text {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.home-img {
+    border-radius: 60%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    margin-top: 100px;
+    width: 250px;
+    height: 250px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 4.5rem;
+    line-height: 8rem;
+    color: #ffffff;
+}
+
+.text h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #5cffec;
+}
+
+.home-text h2:hover {
+    color: #f5ff3a;
+    transition: 0.3s;
+}
+
+.text p {
+    font-size: 0.938rem;
+    margin-bottom: 1.5rem;
+    color: rgb(255, 255, 255);
+    max-width: 800px;
+}
+
+.uil-import {
+    padding-right: 10px;
+}
+
+.color {
+    color: #f5ff3a;
+}
+
+/* About Page */
+
+.about {
+    background-color: #e04c71b9;
+    padding: 30px;
+}
+
+.abt-span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #a527ae;
+}
+
+.about-content {
+    max-width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.about-details pre, span {
+    color: rgb(255, 234, 0);
+}
+
+.about-details {
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+}
+
+.about-content {
+    padding-bottom: 60px;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+/* Education Page */
+
+.education {
+    background-color: #4e89d1;
+}
+
+.education-box {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 40px;
+    background: #ea0770;
+    border-radius: 0.4em;
+}
+
+.education-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.education-box:hover {
+    transform: scale(1.05);
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.education-box h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #00ffff;
+}
+
+.education-box .uil {
+    font-size: 1.7rem;
+    color: #00ffff;
+    padding: 10px 18px;
+    border-radius: 80%;
+    border: 3px dashed;
+    border-color: #00ffff;
+}
+
+.education-box p {
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+
+/* Contact Form */
+
+.contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(177, 64, 243, 0.3)),url(img/bg_img2.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    color: white;
+    font-weight: 600;
+}
+
+.contact-form .format, .contact-form textarea {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 15px;
+    color: #000;
+    background: #FFF;
+    border-radius: 0.4rem;
+}
+
+.contact-form {
+    max-width: 450px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+}
+
+select option {
+    padding: 15px;
+    font-weight: 600;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+form .btn {
+    margin-bottom: 50px;
+}
+
+#error pre {
+    color: #DF4759;
+    margin-bottom: 20px;
+    font-weight: 200;
+    padding: 0 15px;
+}
+
+#error h3 {
+    color: #FFC18F;
+    margin-bottom: 20px;
+    padding: 15px 15px 0 15px;
+}
+
+#error {
+    background: #0F0119;
+    margin-bottom: 30px;
+}
+
+
+/* Page Footer */
+
+.footer h4 {
+    color: #ffea00;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #ffffff;
+    margin-bottom: 20px;
+} 
+
+.footer {
+    background: #2e034d;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.icons .uil {
+    font-size: 30px;
+    color: #d61e34;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px;
+}
+
+.footer p span {
+    color: #cf11bc;
+    font-weight: 600;
+}
+
+.icons .uil:hover {
+    color: #ffffff;
+    transition: 0.6s;
+}
+
+/* Making the website responsive */
+
+@media (max-width: 550px) {
+    .home-text h2 {
+        font-size: 2.3rem;
+        line-height: 3.2rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-text p {
+        font-size: 0.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.5rem;
+    }
+    
+
+    .about-details pre {
+        font-size: 0.9rem;
+    }
+
+    .heading {
+        font-size: 3.2rem;
+    }
+    
+    .abt-span {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #0F0119;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        z-index: 300;
+    }
+
+    .menu-icon {
+        display: flex;
+        position: fixed;
+        float: left;
+        padding: 20px;
+        background-color: #0F0119;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .open-menu {
+        right: 0;
+        transition: 0.5s;
+    }
+
+    .home-text h2 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+
+    .home-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-text p {
+        font-size: 0.75rem;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+}
+
